@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 500px;
+  margin-left: 450px;
+}
+.nav{
+    /* width:  ;
+    background-color: black;
+    float: left; */
+    list-style-type: none;
+margin: 0;
+padding: 0;
+ overflow: hidden;
+background-color: #333;
+}
+li{
+    float: left;
+}
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;}
+</style>
+</head>
+<body>
+
+<h3>Contact Form</h3>
+<ul class="nav">
+    <li><a href="cv.html">cv</a></li>
+    <li><a href="contactus.html">contact</a></li>
+        <li><a href="register.html">register</a></li>
+        <li><a href="login.html">Login</a></li>
+        
+</ul>
+
+<div class="container">
+  <form  id="contact">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="Tanzania">Tanzania</option>
+      <option value="kenya">kenya</option>
+      <option value="uganda">uganda</option>
+    </select>
+
+    <label for="Email">Email</label>
+    <textarea id="Email" name="email" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    document.getElementById('contact').addEventListener("submit" ,function(event){
+        let fname =document.getElementById('fname').value;
+        let lname =document.getElementById('lname').value;
+        let country=document.getElementById('country').value;
+        let Email=document.getElementById('Email').value;
+        let data ={
+            "fname":fname,
+            "lname":lname,
+            "country ":country,
+            "Email":Email
+        };
+        localStorage.setItem("fname",fname);
+        localStorage.setItem("lname",lname);
+        localStorage.setItem("country",country);
+        localStorage.setItem("Email",Email);
+        localStorage.setItem("contact", JSON.stringify(data));
+        alert("successefull save");
+    });
+       
+
+  </script>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7933.345830069717!2d39.21010663711074!3d-6.174526208609822!2m3
+  !1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185cd0983ba5bb93%3A0xa45c46b8e36e5106!2sMe
+  ya%2C%20Zanzibar!5e0!3m2!1sen!2stz!4v1683238616763!5m2!1sen!2stz" width="100%" height="auto" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:01:34 GMT -->
+</html>
