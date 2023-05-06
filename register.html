@@ -108,8 +108,8 @@ li a{
         
 </ul>
 <div class="for">
-
-    <form  >
+   
+    <form id="focus" action="login.html"  >
         <div class="container">
             <h1>Register</h1>
             <p>Please fill in this form to create an account.</p>
@@ -134,7 +134,26 @@ li a{
 </div>
 </form>
 
+<script>
+  document.getElementById('focus').addEventListener("submit", function(event){
+    event.preventDefault();
+   let email=document.getElementById('email').value;
+   let pas =document.getElementById('psw').value;
+   let reps =document.getElementById('psw-repeat').value;
+   let data={
+    "email":email,
+    "psw"  :pas,
+    "psw-repeat":reps
 
+   }; 
+   localStorage.setItem("email",email);
+   localStorage.setItem("psw",pas);
+   localStorage.setItem("psw-repeat",reps);
+   localStorage.setItem("focus" ,JSON.stringify(data));
+   alert("successful saved");
+
+  });
+</script>
     </div>
 
 

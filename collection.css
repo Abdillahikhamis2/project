@@ -6,7 +6,7 @@
     
 }
 .bb{
-    background-color: lightblue;
+    background-color: rgb(46, 105, 125);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,15 +25,16 @@
     grid-template-columns: 1fr 2fr;
     box-shadow: 0 35px 50px  rgba(0, 0, 0, 1);
  }
- .bb .container .left{
+
+  .left{
     position: relative;
-    background-color: #014dc8;
+    background-color: #041837;
     padding: 40px;
 
  }
-.bb.container.right{
+.right{
     position: relative;
-    background: blue;
+    background: #041837;
     padding: 40px;
 
  }
@@ -63,16 +64,20 @@
     
  }
 .h{
-    color:black;
+    color:#fff;
     font-size: 10.5px;
     margin-top: 20px;
     text-transform: uppercase;
     text-align: center;
     font-weight: 600px;
     line-height: 1px;
+    font-style: italic;
 
 }
-.sp{} 
+.sp{
+    color: #fff;
+    font-style: italic;
+} 
 
 .pesonal{
     padding-top: 40px;
@@ -86,6 +91,7 @@
     letter-spacing: 1px;
     color: #fff;
     font-weight: 300px;
+    font-style: italic;
 
 
 
@@ -99,6 +105,7 @@
     width: 30px;
     font-size: 18px;
     color: #fff;
+    font-style: italic;
 }
 
 .pacent{
@@ -116,18 +123,20 @@
 .a5{
     color: #03a9f4;
     font-weight: 500;
+    font-style: italic;
 
 }
 .a4{
     font-weight: 500;
     color: #fff;
+    font-style: italic;
 }
 .d{
     position: absolute;
     top: 0px;
     left: 0px;
     height: 100%;
-    background: #03a9f4;
+    background: #011d2a;
 }
 .text{
     font-weight: 500;
@@ -141,6 +150,7 @@
 .education{
     font-weight: 600;
     color: #fff;
+
 }
 .box{
     position: relative;
@@ -153,22 +163,41 @@
 .right4{
     text-transform: lowercase;
     font-weight: 300px;
-    color: #848c99;
+    color: rgba(0, 0, 0, 0.222);
+    margin-left: 10px;
+    font-style: italic;
+}
+.depend{
+        margin-left:12px ;
+        font-style: italic;
+}
+.depe{
+    text-transform: uppercase;
+    font-weight: 200px;
+    color:rgb(0, 0, 0, 0.222);
+    margin-left: 10px;
+    font-style: italic;
+
+}
+.bom{
+     margin-left: 500px;
+     border-radius: 70px;
 }
 .nav{
-    /* width:  ;
+     /*width:  ;
     background-color: black;
     float: left; */
+    
     list-style-type: none;
 margin: 0;
 padding: 0;
  overflow: hidden;
 background-color: #333;
 }
-li{
+.nl{
     float: left;
 }
-li a{
+.na{
     display: block;
     color: white;
     text-align: center;
